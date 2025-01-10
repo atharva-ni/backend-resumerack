@@ -5,7 +5,9 @@ const fileUploadController = require("./components/fileUploadController");
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+    origin : "*"
+}));
 app.use(express.json()); // To handle JSON data in requests
 
 // Routes
